@@ -1,0 +1,56 @@
+<%-layout("/layouts/boilerPlate") %>
+<body>
+    
+    <div class="row mt-1">
+    <div class="col-8 offset-2" >
+        <h4>Create new listing</h4>
+     <form method="post" action="/listing"  novalidate class="needs-validation" enctype="multipart/form-data">       <!--as we want to turn off the browser default styling of validating error and we wnat to the bootstrap custom styling          -->
+        <div class="mb-1">
+            <label for="title" class="form-label">Title</label>
+            <input name="title" placeholder="Add title" type="text" class="form-control" required>
+            <div class="valid-feedback">
+               title looks good
+              </div>
+        </div>
+        <div class="mb-1">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" placeholder="enter description" type="text" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+                Please enter a short description.
+              </div>
+        </div>
+        <div class="mb-1">
+            <label for="image" class="form-label">Upload Picture</label>
+            <input name="image"  type="file" class="form-control" required>
+        </div>
+        <div class="mb-1"> 
+            <label for="price" class="form-label">Price</label>
+            <input name="price" placeholder="1200" class="form-control" required>
+            <div class="invalid-feedback">
+               Price should be valid.
+              </div>
+        </div>
+        <div class="row">
+         <div class="mb-1 col-md-4"> 
+            <label for="country" class="form-label">Country</label>
+            <input name="country" placeholder="India" type="text" class="form-control" required>
+            <div class="invalid-feedback">
+                country should be valid
+              </div>
+        </div>
+        <div class="mb-1 col-md-8"> 
+            <label for="location" class="form-label">Location</label>
+            <input name="location" placeholder="Jaipur,Rajasthan" type="text" class="form-control" required>
+            <div class="invalid-feedback">
+               location should be valid
+              </div>
+        </div>
+        </div>
+       <button class="btn btn-dark new-btn mt-1">Add</button>
+       <br><br>
+
+    </form>
+    </div>
+</div>
+</body>
+</html>
